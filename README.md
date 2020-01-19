@@ -82,6 +82,7 @@ DELETE: http://localhost:1600/API/ARTICLES/4
 
 
 
-
+If i would extend the project, i would add  a swagger library for helping developers to understand the project better. 
+Also it s mandatory to add an authentication controller to secure the app. 
 
 
