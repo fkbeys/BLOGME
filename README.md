@@ -22,6 +22,7 @@ The database designed as Microsoft Sql Server. The table creation scripts are be
 
 
 1-Create the ARTICLES TABLE
+```
 CREATE TABLE [dbo].[ARTICLES](
 	[ARTICLE_ID] [int] IDENTITY(1,1) NOT NULL,
 	[ARTICLE_AUTHOR_ID] [int] NULL,
@@ -36,7 +37,7 @@ CREATE TABLE [dbo].[ARTICLES](
 	[ARTICLE_LIKE] [int] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-
+```
 2- Create the AUTHORS TABLE
 
 ```
