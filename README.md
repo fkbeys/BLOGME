@@ -16,8 +16,11 @@ Note: The database context gets the connection string while startup.
  ![Image of 2](https://github.com/fkbeys/BLOGME/blob/master/BLOGGER_FETHULLAHKAYA/IMG/2.png?raw=true)
 
 HOW TO USE THE BLOGGER APP
-The database designed as Microsoft Sql Server. The table creation scripts are below. But before please create a database named as BLOGME  
 
+
+The database designed as Microsoft Sql Server. The table creation scripts are below. But before please create a database named as BLOGME  
+The Entity Framework will create the Database if you run the Update-Database in console .
+Otherview, the database designed as below
  ![Image of 3](https://github.com/fkbeys/BLOGME/blob/master/BLOGGER_FETHULLAHKAYA/IMG/3.png?raw=true)
 
 
