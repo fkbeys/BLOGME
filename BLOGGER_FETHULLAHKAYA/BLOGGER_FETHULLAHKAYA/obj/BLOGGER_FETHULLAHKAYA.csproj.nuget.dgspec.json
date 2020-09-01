@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kaya\\source\\repos\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj": {}
+    "C:\\Users\\FKAYA\\source\\repos\\BLOGME\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kaya\\source\\repos\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj": {
+    "C:\\Users\\FKAYA\\source\\repos\\BLOGME\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaya\\source\\repos\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj",
+        "projectUniqueName": "C:\\Users\\FKAYA\\source\\repos\\BLOGME\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj",
         "projectName": "BLOGGER_FETHULLAHKAYA",
-        "projectPath": "C:\\Users\\Kaya\\source\\repos\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj",
-        "packagesPath": "C:\\Users\\Kaya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaya\\source\\repos\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\obj\\",
+        "projectPath": "C:\\Users\\FKAYA\\source\\repos\\BLOGME\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA.csproj",
+        "packagesPath": "C:\\Users\\FKAYA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FKAYA\\source\\repos\\BLOGME\\BLOGGER_FETHULLAHKAYA\\BLOGGER_FETHULLAHKAYA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\FKAYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -42,15 +42,21 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.7, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -79,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

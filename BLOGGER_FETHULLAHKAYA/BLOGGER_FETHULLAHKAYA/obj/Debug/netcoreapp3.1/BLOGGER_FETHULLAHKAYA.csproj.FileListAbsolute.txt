@@ -245,3 +245,4 @@ C:\Users\Kaya\source\repos\BLOGGER_FETHULLAHKAYA\BLOGGER_FETHULLAHKAYA\obj\Debug
 C:\Users\Kaya\source\repos\BLOGGER_FETHULLAHKAYA\BLOGGER_FETHULLAHKAYA\obj\Debug\netcoreapp3.1\BLOGGER_FETHULLAHKAYA.csproj.CopyComplete
 C:\Users\Kaya\source\repos\BLOGGER_FETHULLAHKAYA\BLOGGER_FETHULLAHKAYA\obj\Debug\netcoreapp3.1\BLOGGER_FETHULLAHKAYA.dll
 C:\Users\Kaya\source\repos\BLOGGER_FETHULLAHKAYA\BLOGGER_FETHULLAHKAYA\obj\Debug\netcoreapp3.1\BLOGGER_FETHULLAHKAYA.pdb
+C:\Users\FKAYA\Source\Repos\BLOGME\BLOGGER_FETHULLAHKAYA\BLOGGER_FETHULLAHKAYA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll

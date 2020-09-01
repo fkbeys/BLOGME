@@ -18,7 +18,6 @@ namespace BLOGS.Models
         [StringLength(20), Required]
         public string AUTHOR_SURNAME { get; set; }
 
-
         public DateTime AUTHOR_CREATE_DATE { get; set; } = DateTime.Now;
         public bool AUTHOR_ISACTIVE { get; set; } = true;
 

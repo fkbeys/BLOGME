@@ -29,7 +29,10 @@ namespace BLOGGER_FETHULLAHKAYA
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
 
 
-            //Repository Pattern apply
+            //     services.AddDbContext<DatabaseContext>
+            //(o => o.UseSqlServer(Configuration.
+            // GetConnectionString("DefaultConnection")));
+
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             services.AddControllers();
