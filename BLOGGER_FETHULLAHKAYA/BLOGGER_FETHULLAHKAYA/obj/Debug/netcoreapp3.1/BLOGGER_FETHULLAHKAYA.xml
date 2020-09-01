@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BLOGGER_FETHULLAHKAYA</name>
+    </assembly>
+    <members>
+        <member name="T:BLOGGER_FETHULLAHKAYA.Controllers.ARTICLESController">
+            <summary>
+            The Artciles controller is for CRUD operations for Articles
+            </summary>
+        </member>
+        <member name="M:BLOGGER_FETHULLAHKAYA.Controllers.ARTICLESController.Get">
+            <summary>
+            This Get Method returns All Articles
+            </summary>
+            <returns>Array of Articles </returns>
+        </member>
+        <member name="M:BLOGGER_FETHULLAHKAYA.Controllers.ARTICLESController.Get(System.Nullable{System.Int32})">
+            <summary>
+            This Get method finds an articel according to its ID
+            </summary>
+            <param name="id">Int id to find the article </param>
+            <returns>an article</returns>
+        </member>
+        <member name="M:BLOGGER_FETHULLAHKAYA.Controllers.ARTICLESController.Put(System.Nullable{System.Int32},BLOGS.Models.ARTICLES)">
+            <summary>
+            Put method to update the article
+            </summary>
+            <param name="id">int id to find the article</param>
+            <param name="article"> the new updated values </param>
+            <returns>returns OK if the operation is success</returns>
+        </member>
+        <member name="M:BLOGGER_FETHULLAHKAYA.Controllers.ARTICLESController.Post(BLOGS.Models.ARTICLES)">
+            <summary>
+            To insert a new article record
+            </summary>
+            <param name="articles">article information</param>
+            <returns>returns OK if the operation is success</returns>
+        </member>
+        <member name="M:BLOGGER_FETHULLAHKAYA.Controllers.ARTICLESController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            deletes the specific record
+            </summary>
+            <param name="id">int id to find the record that will be deleted</param>
+            <returns> Returns OK if the operation is success</returns>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_ID">
+            <summary>
+            ID FOR ARTICLE
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_AUTHOR_ID">
+            <summary>
+            This area is used to find which author created the article
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_CREATE_DATE">
+            <summary>
+            Represents the the creation date of the article 
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_EDIT_AUTHOR_ID">
+            <summary>
+            by default this area is null, otherwise if this field contains a author id, it means that, that author has made 
+            changes to the article.
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_EDIT_DATE">
+            <summary>
+            this area represents the change date of the article
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_TITLE">
+            <summary>
+            article title
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_IMAGEURL">
+            <summary>
+            this area stores the path of the image 
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_DESCRIPTION">
+            <summary>
+            Article Description
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_CONTENT">
+            <summary>
+            Article Content
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_ISACTIVE">
+            <summary>
+            This bool area is used to check if the article is active or not
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.ARTICLES.ARTICLE_LIKE">
+            <summary>
+            this int area keeps the information of how many times the article liked by the users
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.AUTHORS.AUTOHOR_ID">
+            <summary>
+            Author ID 
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.AUTHORS.AUTHOR_NAME">
+            <summary>
+            Author Name
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.AUTHORS.AUTHOR_SURNAME">
+            <summary>
+            Author Surname
+            </summary>
+        </member>
+        <member name="P:BLOGS.Models.AUTHORS.AUTHOR_CREATE_DATE">
+            <summary>
+            This area shows the creation date of the article
+            </summary>
+        </member>
+    </members>
+</doc>

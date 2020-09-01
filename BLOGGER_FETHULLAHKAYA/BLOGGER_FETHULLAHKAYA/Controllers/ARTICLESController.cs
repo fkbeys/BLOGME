@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BLOGGER_FETHULLAHKAYA.Controllers
 {
+    /// <summary>
+    /// The Artciles controller is for CRUD operations for Articles
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ARTICLESController : ControllerBase
@@ -22,13 +25,21 @@ namespace BLOGGER_FETHULLAHKAYA.Controllers
 
 
         // GET api/articles
+        /// <summary>
+        /// This Get Method returns All Articles
+        /// </summary>
+        /// <returns>Array of Articles </returns>
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(ARTICLESREPO.All());
         }
 
-
+        /// <summary>
+        /// This Get method finds an articel according to its ID
+        /// </summary>
+        /// <param name="id">Int id to find the article </param>
+        /// <returns>an article</returns>
         // GET api/articles/5
         [HttpGet("{id}")]
         public IActionResult Get(int? id)
@@ -43,7 +54,12 @@ namespace BLOGGER_FETHULLAHKAYA.Controllers
         }
 
 
-
+        /// <summary>
+        /// Put method to update the article
+        /// </summary>
+        /// <param name="id">int id to find the article</param>
+        /// <param name="article"> the new updated values </param>
+        /// <returns>returns OK if the operation is success</returns>
         // PUT api/articles
         [HttpPut("{id}")]
         public IActionResult Put(int? id, [FromBody]ARTICLES article)
@@ -53,23 +69,23 @@ namespace BLOGGER_FETHULLAHKAYA.Controllers
             {
                 if (!id.HasValue) return BadRequest();
                 if (!ModelState.IsValid || article == null) return BadRequest();
-                 
+                
                 if (ARTICLESREPO.Update(article))
                     return Ok(article);
             }
             catch (System.Exception)
             {
-
-
                 return BadRequest();
             }
-
             return BadRequest();
-
         }
 
          
-         
+         /// <summary>
+         /// To insert a new article record
+         /// </summary>
+         /// <param name="articles">article information</param>
+         /// <returns>returns OK if the operation is success</returns>
         // POST api/articles
         [HttpPost]
         public IActionResult Post([FromBody]ARTICLES articles)
@@ -83,7 +99,11 @@ namespace BLOGGER_FETHULLAHKAYA.Controllers
         }
 
 
-
+        /// <summary>
+        /// deletes the specific record
+        /// </summary>
+        /// <param name="id">int id to find the record that will be deleted</param>
+        /// <returns> Returns OK if the operation is success</returns>
         // DELETE api/articles/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int? id)

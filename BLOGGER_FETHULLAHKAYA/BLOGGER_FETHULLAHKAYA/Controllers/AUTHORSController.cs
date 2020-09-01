@@ -1,96 +1,99 @@
 ﻿using BLOGGER_FETHULLAHKAYA.DATA;
+using BLOGGER_FETHULLAHKAYA.DATA.REPO;
 using BLOGS.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace BLOGGER_FETHULLAHKAYA.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AUTHORSController : ControllerBase
-    {
-        private readonly DatabaseContext _context;
+    ///// <summary>
+    ///// Authors controller is for CRUD operations of Authors
+    ///// </summary>
+    //[Route("api/[controller]")]
+    //[ApiController]
+    //public class AUTHORSController : ControllerBase
+    //{
+
+    //    private readonly IRepository<AUTHORS> _context;
+
+    //    //singleton in the constructor
 
 
-        // in this controller, i have'nt applied a Repostry Patter. so in the future, it will be hard to make some changes. 
+    //    public AUTHORSController(IRepository<AUTHORS> context)
+    //    {
+    //        _context = context;
+    //    }
 
-            //singleton in the constructor
-        public AUTHORSController(DatabaseContext context)
-        {
-            _context = context;
-        }
-
-        //list all
-        [HttpGet]
-        public async Task<IEnumerable<AUTHORS>> Get()
-        {
-            return await _context.AUTHORSS.ToListAsync();
-        }
+    //    //list all
+    //    [HttpGet]
+    //    public async Task<IEnumerable<AUTHORS>> Get()
+    //    {
+    //        return await _context.All().ToListAsync();
+    //    }
 
 
-        //find by id
-        [HttpGet("{id}")]
-        public async Task<ActionResult<AUTHORS>> GetAUTHORS(int id)
-        {
-            if (string.IsNullOrWhiteSpace(id.ToString()))
-                return NotFound();
-            return await _context.AUTHORSS.FindAsync(id);
-        }
+    //    //find by id
+    //    [HttpGet("{id}")]
+    //    public async Task<ActionResult<AUTHORS>> GetAUTHORS(int id)
+    //    {
+    //        if (string.IsNullOrWhiteSpace(id.ToString()))
+    //            return NotFound();
+    //           return await _context.Where(x=>x.AUTOHOR_ID==id).FirstOrDefaultAsync();
+             
+                
+    //    }
 
 
-        //update
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAUTHORS(int id, AUTHORS AUTHORSSS)
-        {
-            if (id != AUTHORSSS.AUTOHOR_ID)
-            {
-                return BadRequest();
-            }
+    //    //update
+    //    [HttpPut("{id}")]
+    //    public IActionResult PutAUTHORS(int id, AUTHORS AUTHORSSS)
+    //    {
+    //        if (id != AUTHORSSS.AUTOHOR_ID)
+    //        {
+    //            return BadRequest();
+    //        }
+    //        try
+    //        {
+    //            _context.Update(AUTHORSSS);
+    //        }
+    //        catch (DbUpdateConcurrencyException)
+    //        {
 
-            _context.Entry(AUTHORSSS).State = EntityState.Modified;
+    //            return BadRequest();
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
+    //        }
 
-                return BadRequest();
-
-            }
-
-            return NoContent();
-        }
+    //        return NoContent();
+    //    }
 
 
-        //delete
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<AUTHORS>> DeleteAUTHORS(int id)
-        {
-            var aUTHORS = await _context.AUTHORSS.FindAsync(id);
-            if (aUTHORS == null)
-            {
-                return NotFound();
-            }
+    //    //delete
+    //    [HttpDelete("{id}")]
+    //    public async Task<ActionResult<AUTHORS>> DeleteAUTHORS(int id)
+    //    {
+    //        var aUTHORS = await _context.Where(x => x.AUTOHOR_ID == id).FirstOrDefaultAsync();
+    //        if (aUTHORS == null)
+    //        {
+    //            return NotFound();
+    //        }
 
-            _context.AUTHORSS.Remove(aUTHORS);
-            await _context.SaveChangesAsync();
+    //        _context.Delete(aUTHORS);
 
-            return aUTHORS;
-        }
+    //        return aUTHORS;
+    //    }
 
 
-        //insert
-        [HttpPost]
-        public async Task<ActionResult<AUTHORS>> PostAUTHORS(AUTHORS Authors)
-        {
-            _context.AUTHORSS.Add(Authors);
-            await _context.SaveChangesAsync();
+    //    //insert
+    //    [HttpPost]
+    //    public async Task<ActionResult<AUTHORS>> PostAUTHORS(AUTHORS Authors)
+    //    {
+    //        _context.Add(Authors);
+    //        //await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetAUTHORS", new { id = Authors.AUTOHOR_ID }, Authors);
-        }
-    }
+    //        return CreatedAtAction("GetAUTHORS", new { id = Authors.AUTOHOR_ID }, Authors);
+    //    }
+    //}
 }

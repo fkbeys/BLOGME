@@ -10,7 +10,6 @@ namespace BLOGGER_FETHULLAHKAYA.DATA
         {
            
         }
-
         public DbSet<AUTHORS> AUTHORSS { get; set; }
         public DbSet<ARTICLES> ARTICLESS { get; set; }
         
